@@ -26,6 +26,9 @@ namespace UnityECSTile
         private float _lastTime = 0.0f;
         private float _damageRate = 1.0f;
         
+        // There is apparently a bug with [BurstCompile] and most functionality
+        // of the EntityCommandBuffer, so we must disable it for now.
+        //[BurstCompile]
         struct TileDamagerJob : IJob
         {
             [ReadOnly] public EntityArray Entities;

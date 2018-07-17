@@ -26,7 +26,10 @@ namespace UnityECSTile
 
         [Inject] private DamageData _damageData;
         [Inject] private ResolveDamageBarrier _barrier;
-        
+
+        // There is apparently a bug with [BurstCompile] and most functionality
+        // of the EntityCommandBuffer, so we must disable it for now.
+        //[BurstCompile]
         struct ResolveDamageJob : IJob
         {
             [ReadOnly] public EntityArray Entities;
