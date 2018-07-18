@@ -64,14 +64,16 @@
     <Compile Include="Assets\Source\ECS\Components\ColorComponentWrapper.cs" />
     <Compile Include="Assets\Source\ECS\Components\DamageComponent.cs" />
     <Compile Include="Assets\Source\ECS\Components\HealthComponentWrapper.cs" />
-    <Compile Include="Assets\Source\ECS\Components\Rendering\SpriteInstanceRendererSystem.cs" />
     <Compile Include="Assets\Source\ECS\Components\Rendering\SpriteInstanceRendererWrapper.cs" />
     <Compile Include="Assets\Source\ECS\Components\TileComponentWrapper.cs" />
-    <Compile Include="Assets\Source\ECS\Systems\Rendering\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Source\ECS\Systems\Rendering\SpriteInstanceRendererSystem.cs" />
     <Compile Include="Assets\Source\ECS\Systems\ResolveDamageSystem.cs" />
     <Compile Include="Assets\Source\ECS\Systems\TileDamagerSystem.cs" />
+    <Compile Include="Assets\Source\ECS\Systems\TileHealthColorSystem.cs" />
     <Compile Include="Assets\Source\ECS\Systems\TileHealthSystem.cs" />
     <Compile Include="Assets\Source\ECS\Systems\TileSpawnerSystem.cs" />
+    <Compile Include="Assets\Source\Utils\CameraUtils.cs" />
+    <Compile Include="Assets\Source\Utils\NewBehaviourScript.cs" />
     <None Include="Assets\Shaders\ECSSpriteShader.shader" />
     <Reference Include="Unity.Transforms">
       <HintPath>C:/Projects/UnityECSTile/Library/ScriptAssemblies/Unity.Transforms.dll</HintPath>

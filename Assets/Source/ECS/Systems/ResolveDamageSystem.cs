@@ -1,7 +1,5 @@
 ﻿using Unity.Entities;
-using Unity.Mathematics;
 using Unity.Jobs;
-using Unity.Burst;
 using Unity.Collections;
 
 namespace UnityECSTile

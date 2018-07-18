@@ -26,7 +26,6 @@
             CGPROGRAM
             #pragma vertex VertMain
             #pragma fragment FragMain
-            #pragma target 2.0
             #pragma multi_compile_instancing
 
             #include "UnityCG.cginc"
@@ -39,6 +38,7 @@
             {
                 float4 position : POSITION;
                 float2 uv       : TEXCOORD0;
+                UNITY_VERTEX_INPUT_INSTANCE_ID
             };
 
             struct FragInput
@@ -46,11 +46,14 @@
                 float4 position : SV_POSITION;
                 fixed4 color    : COLOR;
                 float2 uv       : TEXCOORD0;
+                //UNITY_VERTEX_INPUT_INSTANCE_ID // necessary only if you want to access instanced properties in fragment Shader.
             };
 
             FragInput VertMain(VertInput input)
             {
                 FragInput output;
+
+                UNITY_SETUP_INSTANCE_ID(input);
 
                 output.position = UnityObjectToClipPos(input.position);
                 output.position = UnityPixelSnap(output.position);
